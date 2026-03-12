@@ -1,30 +1,42 @@
-# Templates
+# sv
 
-Tre template SvelteKit pronti per portfolio e siti clienti.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-| Branch | Template | Descrizione |
-|---|---|---|
-| `template/studio` | Studio | Piccolo studio creativo, single-page, tema scuro |
-| `template/servizi` | Servizi | Azienda di servizi, multi-pagina, tema chiaro navy |
-| `template/prodotti` | Prodotti | Azienda prodotti/SaaS, multi-pagina, blog incluso |
+## Creating a project
 
-## Utilizzo rapido
+If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# Scegli il template desiderato
-git clone --branch template/studio https://github.com/s1lver091/Templates mio-progetto
-cd mio-progetto
-npm install
-npm run dev
+```sh
+# create a new project
+npx sv create my-app
 ```
 
-## Personalizzazione
+To recreate this project with the same configuration:
 
-Ogni template ha un `CUSTOMIZATION.md` con istruzioni dettagliate per modificare colori e contenuto.
+```sh
+# recreate this project
+npx sv@0.12.7 create --template minimal --types ts --install npm .
+```
 
-## Stack
+## Developing
 
-- [SvelteKit 2](https://svelte.dev/docs/kit)
-- [shadcn-svelte](https://www.shadcn-svelte.com)
-- [Tailwind CSS 4](https://tailwindcss.com)
-- [Motion](https://motion.dev)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```sh
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```sh
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
