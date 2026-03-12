@@ -1,42 +1,31 @@
-# sv
+# Template Studio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Template per piccolo studio creativo / freelancer. Single-page con tema scuro e accento lime.
 
-## Creating a project
+## Installazione
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.12.7 create --template minimal --types ts --install npm .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+git clone --branch template/studio https://github.com/s1lver091/Templates mio-studio
+cd mio-studio
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Personalizzazione rapida
 
-To create a production version of your app:
+1. **Colori** → modifica le variabili in `src/app.css` (sezione `TEMA STUDIO`)
+2. **Contenuto** → modifica i file in `src/lib/content/`
+3. **Immagini** → sostituisci i placeholder in `static/images/`
 
-```sh
+Vedi `CUSTOMIZATION.md` per dettagli completi.
+
+## Build produzione
+
+```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Deploy
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Compatibile con Vercel, Netlify, e qualsiasi host con supporto Node.js.
