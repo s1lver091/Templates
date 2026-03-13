@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { worksContent } from '$lib/content/works'
   import type { Work } from '$lib/content/works'
 
   let { work }: { work: Work } = $props()
@@ -26,7 +27,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Vedi progetto →
+        {worksContent.linkLabel}
       </a>
     {/if}
   </div>

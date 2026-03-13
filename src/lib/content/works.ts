@@ -7,6 +7,10 @@ export type Work = {
   link?: string
 }
 
+export const worksContent = {
+  linkLabel: 'Vedi progetto →',
+}
+
 export const works: Work[] = [
   {
     id: 'progetto-1',
